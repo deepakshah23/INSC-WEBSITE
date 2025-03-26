@@ -17,24 +17,29 @@ const TeamSection = () => {
           <div className="flex flex-col items-center">
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1580518337843-f959e992563b?auto=format&fit=crop&w=500&q=80"
-                alt="Anil Sharma"
+                src="/img/team/team1.jpg"
+                alt="Amit"
                 className="w-full h-full object-cover"
               />
             </div>
             <h3 className="text-2xl font-bold mb-2">Anil Sharma</h3>
             <p className="text-gray-600 italic mb-2">President</p>
-            <p className="text-sm text-blue-900 font-medium">
-              National Secretary-Human Rights
-            </p>
+            <div>
+              <p
+                className="text-black italic mb-2"
+                style={{ fontSize: "14px" }}
+              >
+                (National Secretary-Human Rights)
+              </p>
+            </div>
           </div>
 
           {/* Team Member 2 */}
           <div className="flex flex-col items-center">
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80"
-                alt="Sanjay Aggarwal"
+                src="/img/team/team9.jpeg"
+                alt="Nitin"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -42,17 +47,22 @@ const TeamSection = () => {
             <p className="text-gray-600 italic mb-2">
               National Committee Member
             </p>
-            <p className="text-sm text-blue-900 font-medium">
-              Founder (Sanvin Education)
-            </p>
+            <div>
+              <p
+                className="text-black italic mb-2"
+                style={{ fontSize: "14px" }}
+              >
+               Founder (Sanvin Education)
+              </p>
+            </div>
           </div>
 
           {/* Team Member 3 */}
           <div className="flex flex-col items-center">
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80"
-                alt="Dr. Ankit Sharma"
+                src="/img/team/team2.jpg"
+                alt="Palvi"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -60,57 +70,152 @@ const TeamSection = () => {
             <p className="text-gray-600 italic mb-2">
               National Committee Member
             </p>
-            <p className="text-sm text-blue-900 font-medium">
-              Director (Employment Express)
-            </p>
+            <div>
+              <p
+                className="text-black italic mb-2"
+                style={{ fontSize: "14px" }}
+              >
+                Director (Employment Express)
+              </p>
+            </div>
           </div>
 
           {/* Team Member 4 */}
           <div className="flex flex-col items-center">
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=500&q=80"
-                alt="Adv. Aman Jindal"
+                src="/img/team/team3.jpg"
+                alt="Team Member 1"
                 className="w-full h-full object-cover"
               />
             </div>
             <h3 className="text-2xl font-bold mb-2">Adv. Aman Jindal</h3>
-            <p className="text-gray-600 italic mb-2">Legal Advisor</p>
-            <p className="text-sm text-blue-900 font-medium">
-              Supreme Court of India
+            <p className="text-gray-600 italic mb-2">
+              National Committee Member
             </p>
+            <div>
+              <p
+                className="text-black italic mb-2"
+                style={{ fontSize: "14px" }}
+              >
+                Legal(Adv-Delhi High Court)
+              </p>
+            </div>
           </div>
 
           {/* Team Member 5 */}
           <div className="flex flex-col items-center">
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80"
-                alt="Priya Sharma"
+                src="/img/team/team5.jpg"
+                alt="Ishika Yadav"
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-2">Priya Sharma</h3>
-            <p className="text-gray-600 italic mb-2">Executive Director</p>
-            <p className="text-sm text-blue-900 font-medium">
-              Academic Affairs
+            <h3 className="text-2xl font-bold mb-2">Ishika Yadav</h3>
+            <p className="text-gray-600 italic mb-2">
+              National Committee Member
             </p>
+            <div>
+              <p
+                className="text-black italic mb-2"
+                style={{ fontSize: "14px" }}
+              >
+                IT Manager
+              </p>
+            </div>
           </div>
 
           {/* Team Member 6 */}
           <div className="flex flex-col items-center">
             <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80"
+                src="/img/team/nitin.jpg"
+                alt="Nitin Vaish"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-2">Nitin Vaish</h3>
+            <p className="text-gray-600 italic mb-2">
+              National Committee Member
+            </p>
+            <div>
+              <p
+                className="text-black italic mb-2"
+                style={{ fontSize: "14px" }}
+              >
+                (Ginni Devi Public School Sitapur)
+              </p>
+            </div>
+          </div>
+
+          {/* Team Member 7 */}
+          <div className="flex flex-col items-center">
+            <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+              <img
+                src="/img/team/amit.jpg"
+                alt="Amit Yadav"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-2">Amit Yadav</h3>
+            <p className="text-gray-600 italic mb-2">
+              National Committee Member
+            </p>
+            <div>
+              <p
+                className="text-black italic mb-2"
+                style={{ fontSize: "14px" }}
+              >
+                (CEO-TPS Empire services Pvt Ltd.)
+              </p>
+            </div>
+          </div>
+
+          {/* Team Member 8 */}
+          <div className="flex flex-col items-center">
+            <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+              <img
+                src="/img/team/team4.jpg"
                 alt="Krishna Sharma"
                 className="w-full h-full object-cover"
               />
             </div>
             <h3 className="text-2xl font-bold mb-2">Krishna Sharma</h3>
-            <p className="text-gray-600 italic mb-2">Technology Director</p>
-            <p className="text-sm text-blue-900 font-medium">
-              Digital Initiatives
+            <p className="text-gray-600 italic mb-2">
+              National Committee Member
             </p>
+            <div>
+              <p
+                className="text-black italic mb-2"
+                style={{ fontSize: "14px" }}
+              >
+                Director(DIGIGENER8)
+              </p>
+            </div>
+          </div>
+
+          {/* Team Member 9 */}
+          <div className="flex flex-col items-center">
+            <div className="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+              <img
+                src="/img/team/Palvi1.jpg"
+                alt="Palvi Bali"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-2">Palvi Bali</h3>
+            <p className="text-gray-600 italic mb-2">
+              National Committee Member
+            </p>
+            <div>
+              <p
+                className="text-black italic mb-2"
+                style={{ fontSize: "14px" }}
+              >
+                Education Collaboration.
+              </p>
+            </div>
           </div>
         </div>
       </div>
