@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import ScrollToTopButton from "./components/Hook/Scroll-top";
 import ContactPage from "./pages/ContactPage";
+import AboutusPage from "./pages/AboutusPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contactus" element={<ContactPage />} />
+          <Route path="/aboutus" element={<AboutusPage />} />
         </Routes>
       </div>
       <Footer />
