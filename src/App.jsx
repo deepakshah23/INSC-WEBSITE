@@ -7,6 +7,7 @@ import ContactPage from "./pages/ContactPage";
 import AboutusPage from "./pages/AboutusPage";
 import BecomeMemberPage from "./pages/BecomeMemberPage";
 import EventPage from "./pages/EventPage";
+import ScrollToTopButton from "./components/Hook/Scroll-top";
 
 function App() {
   return (
