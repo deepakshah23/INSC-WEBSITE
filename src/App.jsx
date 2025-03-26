@@ -3,18 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-import ScrollToTopButton from "./components/Hook/Scroll-top";
 import ContactPage from "./pages/ContactPage";
 import AboutusPage from "./pages/AboutusPage";
 import BecomeMemberPage from "./pages/BecomeMemberPage";
 import EventPage from "./pages/EventPage";
+import ScrollToTopButton from "./components/Hook/Scroll-top";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <ScrollToTopButton />
-
       <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
