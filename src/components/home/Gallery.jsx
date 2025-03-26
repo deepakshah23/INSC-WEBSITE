@@ -9,8 +9,8 @@ const Gallery = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <section className="min-h-[50vh] flex items-center justify-center relative overflow-hidden pt-24">
+    <div className="min-h-screen bg-gray-100 ">
+      <section className="min-h-[30vh] flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-black/[0.02] -z-10" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h1 className="text-6xl font-bold text-gray-900 mb-6 bg-clip-text  bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900">
@@ -22,7 +22,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8 pb-16 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {images.map((image, index) => (
             <div

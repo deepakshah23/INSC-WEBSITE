@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const ContactSection = () => {
   return (
@@ -15,31 +15,31 @@ const ContactSection = () => {
 
         <form className="max-w-lg mx-auto">
           <div className="mb-4">
-            <input 
-              type="text" 
-              placeholder="Your Name" 
+            <input
+              type="text"
+              placeholder="Your Name"
               className="w-full p-3 border border-gray-300 rounded"
               required
             />
           </div>
           <div className="mb-4">
-            <input 
-              type="email" 
-              placeholder="Your Email" 
+            <input
+              type="email"
+              placeholder="Your Email"
               className="w-full p-3 border border-gray-300 rounded"
               required
             />
           </div>
           <div className="mb-4">
-            <textarea 
-              placeholder="Your Message" 
+            <textarea
+              placeholder="Your Message"
               className="w-full p-3 border border-gray-300 rounded"
               rows={4} // Changed to use curly braces
               required
             ></textarea>
           </div>
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="bg-blue-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 transition"
           >
             Send Message
@@ -48,6 +48,6 @@ const ContactSection = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ContactSection;

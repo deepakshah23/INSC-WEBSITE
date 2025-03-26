@@ -4,8 +4,9 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
-import MembershipPage from "./pages/MembershipPage"; 
-import ScrollToTopButton from "./components/Hook/Scroll-top";
+import AboutusPage from "./pages/AboutusPage";
+import BecomeMemberPage from "./pages/BecomeMemberPage";
+import EventPage from "./pages/EventPage";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contactus" element={<ContactPage />} />
-          <Route path="/membership" element={<MembershipPage />} /> 
-
+          <Route path="/events" element={<EventPage />} />
+          <Route path="/aboutus" element={<AboutusPage />} />
+          <Route path="/become-member" element={<BecomeMemberPage />} />
         </Routes>
       </div>
       <Footer />

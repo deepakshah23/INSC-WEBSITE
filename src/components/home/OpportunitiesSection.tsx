@@ -3,7 +3,7 @@ import React from "react";
 const OpportunitiesSection = () => {
   return (
     <div className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-[95%]">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-6 mb-4">
             <div className="w-16 h-[1px] bg-red-500"></div>
@@ -111,43 +111,43 @@ const OpportunitiesSection = () => {
 
           {/* Recognition Opportunities */}
           {/* <div className="flex justify-center gap-8"> */}
-            {/* Recognition Opportunities */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="/img/blog/opp8.jpg"
-                alt="Recognition Opportunities"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-4">
-                  Recognition Opportunities
-                </h3>
-                <p className="text-gray-600">
-                  Get recognition and affiliation from authorized bodies.
-                </p>
-              </div>
+          {/* Recognition Opportunities */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/img/blog/opp8.jpg"
+              alt="Recognition Opportunities"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-4">
+                Recognition Opportunities
+              </h3>
+              <p className="text-gray-600">
+                Get recognition and affiliation from authorized bodies.
+              </p>
             </div>
+          </div>
 
-            {/* College/University Admission */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="/img/blog/opp9.jpg"
-                alt="College/University Admission"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-4">
-                  College/University Admission
-                </h3>
-                <p className="text-gray-600">
-                  Guidance and support for the college/university admission
-                  process.
-                </p>
-              </div>
+          {/* College/University Admission */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="/img/blog/opp9.jpg"
+              alt="College/University Admission"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-4">
+                College/University Admission
+              </h3>
+              <p className="text-gray-600">
+                Guidance and support for the college/university admission
+                process.
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
   );
 };
 
