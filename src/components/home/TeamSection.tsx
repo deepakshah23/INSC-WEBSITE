@@ -52,7 +52,7 @@ const TeamSection = () => {
                 className="text-black italic mb-2"
                 style={{ fontSize: "14px" }}
               >
-               Founder (Sanvin Education)
+                Founder (Sanvin Education)
               </p>
             </div>
           </div>
