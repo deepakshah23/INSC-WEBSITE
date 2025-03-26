@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <main className="flex mb-10 min-h-screen flex-col bg-[#f8f8f8]">
       <div className=" flex-grow">
-        <div className="relative bg-black text-white py-20 mb-16">
+        <div className="relative bg-black text-white py-32 mb-16">
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-black/80 z-0"></div>
           <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
             <div className="max-w-5xl mx-auto">
@@ -30,7 +30,6 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-        {/* <ContactMap /> */}
       </div>
     </main>
   );

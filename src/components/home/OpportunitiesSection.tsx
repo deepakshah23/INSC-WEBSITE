@@ -3,7 +3,7 @@ import React from "react";
 const OpportunitiesSection = () => {
   return (
     <div className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-[95%]">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-6 mb-4">
             <div className="w-16 h-[1px] bg-red-500"></div>

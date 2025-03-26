@@ -13,10 +13,15 @@ const Navbar = () => {
         <a href="/" className="text-sm hover:text-yellow-600">
           Home
         </a>
+        <a href="/aboutus" className="text-sm hover:text-gray-400">
+          About Us
+        </a>
         <a href="/events" className="text-sm hover:text-yellow-600">
           Event +
         </a>
-
+        <a href="/become-member" className="text-sm hover:text-yellow-600">
+          Become a Member
+        </a>
         {/* Dropdown Fix */}
         <div className="relative group">
           <button className="text-sm hover:text-yellow-600">
@@ -25,24 +30,28 @@ const Navbar = () => {
           <div className="absolute hidden group-hover:block  bg-[#eceaeaeb] text-black font-semibold p-2 rounded top-full left-0 w-40 shadow-lg z-50">
             <a
               href="http://hondoc.indianschoolconsortium.com/"
+              target="_blank"
               className="block px-4 py-2 rounded hover:text-yellow-600"
             >
               Honorary Doctorate
             </a>
             <a
               href="http://mechtech.employmentexpress.net/"
+              target="_blank"
               className="block px-4 py-2 rounded hover:text-yellow-600"
             >
               Production Engineer
             </a>
             <a
               href="http://webdev.employmentexpress.net/"
+              target="_blank"
               className="block px-4 py-2 rounded hover:text-yellow-600"
             >
               Web Developer
             </a>
             <a
               href="http://daboot.employmentexpress.net/"
+              target="_blank"
               className="block px-4 py-2 rounded hover:text-yellow-600"
             >
               Data Analyst
@@ -57,14 +66,9 @@ const Navbar = () => {
         >
           Diploma Courses
         </a>
-        <a href="#" className="text-sm hover:text-yellow-600">
-          Become a Member
-        </a>
+
         <a href="/contactus" className="text-sm hover:text-gray-400">
           Contact Us
-        </a>
-        <a href="/aboutus" className="text-sm hover:text-gray-400">
-          About Us
         </a>
       </div>
     </nav>
