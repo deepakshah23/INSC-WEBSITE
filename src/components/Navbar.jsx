@@ -1,5 +1,4 @@
 import React from "react";
-import { FiSearch } from "react-icons/fi";
 
 const Navbar = () => {
   return (
@@ -45,8 +44,8 @@ const Navbar = () => {
         >
           Diploma Courses
         </a>
-        <a href="#" className="text-sm hover:text-gray-400">
-          Become a Member
+        <a href="/membership" className="text-sm hover:text-gray-400"> 
+          Membership
         </a>
         <a href="/contactus" className="text-sm hover:text-gray-400">
           Contact Us
