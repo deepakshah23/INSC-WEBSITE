@@ -22,12 +22,7 @@ const OpportunitiesSection = () => {
             />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-4">Scholarship Programs</h3>
-              <p className="text-gray-600">
-                Achieve your academic and financial goals with the Scholarship
-                program of Indian School Consortium through our partners. We
-                provide guidance and assistance in finding and applying for
-                scholarships to students from all backgrounds.
-              </p>
+              <p className="text-gray-600"></p>
             </div>
           </div>
 

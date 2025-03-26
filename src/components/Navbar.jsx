@@ -23,16 +23,28 @@ const Navbar = () => {
             Product & Services ▾
           </button>
           <div className="absolute hidden group-hover:block  bg-[#eceaeaeb] text-black font-semibold p-2 rounded top-full left-0 w-40 shadow-lg z-50">
-            <a href="#" className="block px-4 py-2 rounded hover:bg-[#f5f1f1]">
+            <a
+              href="http://hondoc.indianschoolconsortium.com/"
+              className="block px-4 py-2 rounded hover:text-yellow-600"
+            >
               Honorary Doctorate
             </a>
-            <a href="#" className="block px-4 py-2 rounded hover:bg-[#f5f1f1]">
+            <a
+              href="http://mechtech.employmentexpress.net/"
+              className="block px-4 py-2 rounded hover:text-yellow-600"
+            >
               Production Engineer
             </a>
-            <a href="#" className="block px-4 py-2 rounded hover:bg-[#f5f1f1]">
+            <a
+              href="http://webdev.employmentexpress.net/"
+              className="block px-4 py-2 rounded hover:text-yellow-600"
+            >
               Web Developer
             </a>
-            <a href="#" className="block px-4 py-2 rounded hover:bg-[#f5f1f1]">
+            <a
+              href="http://daboot.employmentexpress.net/"
+              className="block px-4 py-2 rounded hover:text-yellow-600"
+            >
               Data Analyst
             </a>
           </div>
@@ -41,17 +53,17 @@ const Navbar = () => {
         <a
           href="https://employmentexpress.org/"
           target="_blank"
-          className="text-sm hover:text-gray-400"
+          className="text-sm hover:text-yellow-600"
         >
           Diploma Courses
         </a>
-        <a href="#" className="text-sm hover:text-gray-400">
+        <a href="#" className="text-sm hover:text-yellow-600">
           Become a Member
         </a>
-        <a href="/contactus" className="text-sm hover:text-gray-400">
+        <a href="/contactus" className="text-sm hover:text-yellow-600">
           Contact Us
         </a>
-        <a href="#" className="text-sm hover:text-gray-400">
+        <a href="/aboutus" className="text-sm hover:text-yellow-600">
           About Us
         </a>
       </div>

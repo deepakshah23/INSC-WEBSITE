@@ -68,12 +68,12 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full text-white py-14 md:py-16 overflow-hidden"
+      className="relative w-full text-white py-14 md:py-16 overflow-hidden "
     >
       <div
-        className="absolute inset-0 bg-fixed bg-center bg-cover z-0"
+        className="absolute inset-0 bg-fixed bg-center bg-cover z-0 "
         style={{
-          backgroundImage: 'url("/img/bg-insc.jpg")',
+          backgroundImage: 'url("/img/aboutus.jpg")',
           backgroundAttachment: "fixed",
         }}
       >
@@ -87,7 +87,7 @@ export default function StatsSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl  mb-2 backdrop-blur-md py-2 font-se">
+          <h2 className="text-3xl md:text-4xl  mb-2  py-2 font-se">
             You Always Get the Best Guidance
           </h2>
           <div className="w-16 h-[2px] bg-yellow-500 mx-auto"></div>
@@ -108,7 +108,7 @@ export default function StatsSection() {
                   className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-3"
                 />
                 <div className="h-[2px] w-8 bg-yellow-500 mb-3"></div>
-                <p className="text-[20px] md:text-xs text-gray-800 uppercase tracking-wider">
+                <p className="text-[20px] md:text-xs text-gray-100 uppercase tracking-wider">
                   {stat.label}
                 </p>
               </div>
