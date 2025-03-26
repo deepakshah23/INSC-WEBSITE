@@ -62,7 +62,7 @@ const Gallery = () => {
               >
                 <RxCross2 />
               </button>
-              <div className="relative h-[75vh] p-4">
+              <div className="relative h-[73vh] p-4">
                 <img
                   src={selectedImage}
                   alt="Enlarged gallery image"

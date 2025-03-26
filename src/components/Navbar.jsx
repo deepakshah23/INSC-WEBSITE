@@ -12,7 +12,7 @@ const Navbar = () => {
         <a href="/" className="text-sm hover:text-yellow-600">
           Home
         </a>
-        <a href="/aboutus" className="text-sm hover:text-gray-400">
+        <a href="/aboutus" className="text-sm hover:text-yellow-600">
           About Us
         </a>
         <a href="/events" className="text-sm hover:text-yellow-600">
@@ -65,7 +65,7 @@ const Navbar = () => {
         >
           Diploma Courses
         </a>
-        <a href="/contactus" className="text-sm hover:text-gray-400">
+        <a href="/contactus" className="text-sm hover:text-yellow-600">
           Contact Us
         </a>
       </div>
