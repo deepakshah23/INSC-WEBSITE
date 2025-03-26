@@ -1,7 +1,15 @@
 import React from "react";
 
-// ✅ Correct way to load an image from src/assets
+// ✅ Correct way to load images from src/assets
 const childImage = new URL("../assets/child.jpg", import.meta.url).href;
+const advisoryImages = [
+  new URL("../assets/1.jpg", import.meta.url).href,
+  new URL("../assets/2.jpg", import.meta.url).href,
+  new URL("../assets/3.jpg", import.meta.url).href,
+  new URL("../assets/4.jpg", import.meta.url).href,
+  new URL("../assets/5.jpg", import.meta.url).href,
+  new URL("../assets/6.jpg", import.meta.url).href,
+];
 
 const MembershipPage = () => {
   return (
@@ -56,17 +64,13 @@ const MembershipPage = () => {
 
       {/* Why Choose Us Section */}
       <div className="relative w-full py-12 px-6 bg-gray-100 flex justify-center items-center">
-        {/* White Box with Background Image */}
         <div className="relative max-w-6xl w-full bg-white rounded-xl shadow-lg p-8">
-          {/* Background Image Inside White Box */}
           <div 
             className="absolute inset-0 bg-cover bg-center opacity-20 rounded-xl"
             style={{ backgroundImage: `url(${childImage})` }}
           ></div>
           
-          {/* Content Wrapper */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Left Section - Text */}
             <div>
               <h2 className="text-4xl font-bold text-gray-900">
                 Why <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">Choose Us</span>
@@ -77,7 +81,6 @@ const MembershipPage = () => {
               </p>
             </div>
             
-            {/* Right Section - Floating Cards */}
             <div className="grid grid-cols-2 gap-6">
               {[
                 { title: "Recognition Opportunities", icon: "🏆" },
@@ -98,6 +101,59 @@ const MembershipPage = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Advisory Board Section */}
+      <div className="py-12 px-6 text-center">
+        <h2 className="text-3xl font-semibold mb-6">Advisory Board</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {["Sunil Bhadauriya", "S Vishwanath Naik", "Gurjant Singh", "Vijaybhaskar Annapareddy", "Dr. Nitin Vyas", "Dr. Pankaj Kumar"].map((name, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+              <img src={advisoryImages[index]} alt={name} className="w-full h-56 object-cover rounded-md mb-4" />
+              <h3 className="text-lg font-semibold">{name}</h3>
+              <p className="text-gray-600 mt-2 text-sm">Position and Description</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Membership Form Section */}
+      <div className="py-12 px-6">
+        <h2 className="text-center text-3xl font-semibold">Membership Form</h2>
+        <form className="max-w-lg mx-auto mt-8 bg-white p-6 rounded-lg shadow-md">
+          <div className="mb-4">
+            <label className="block text-gray-700">Email *</label>
+            <input type="email" className="w-full p-2 border border-gray-300 rounded" required />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700">Name *</label>
+            <input type="text" className="w-full p-2 border border-gray-300 rounded" required />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700">Organisation Name *</label>
+            <input type="text" className="w-full p-2 border border-gray-300 rounded" required />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700">Phone Number *</label>
+            <input type="tel" className="w-full p-2 border border-gray-300 rounded" required />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700">Address of Organisation *</label>
+            <input type="text" className="w-full p-2 border border-gray-300 rounded" required />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700">Organisation Status *</label>
+            <select className="w-full p-2 border border-gray-300 rounded" required>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="12">12</option>
+              <option value="UG">UG</option>
+              <option value="PG">PG</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Submit</button>
+        </form>
       </div>
     </div>
   );
