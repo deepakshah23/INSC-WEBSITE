@@ -77,10 +77,10 @@ export default function StatsSection() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 "></div>
+        <div className="absolute inset-0 bg-gray-900/40 "></div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 ">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}

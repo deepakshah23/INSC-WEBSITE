@@ -132,7 +132,7 @@ export default function BecomeMemberPage() {
       {/* Advisory Board Section */}
       <div className="py-12 px-6 text-center">
         <h2 className="text-3xl font-semibold mb-6">Advisory Board</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-[90%] mx-auto">
           {[
             "Sunil Bhadauriya",
             "S Vishwanath Naik",

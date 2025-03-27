@@ -9,7 +9,7 @@ const Gallery = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-100 ">
+    <div className="min-h-screen bg-gray-50">
       <section className="min-h-[30vh] flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-black/[0.02] -z-10" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">

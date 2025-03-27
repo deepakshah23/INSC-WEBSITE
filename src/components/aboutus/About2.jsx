@@ -46,7 +46,7 @@ export default function About2() {
   }, [isAutoPlaying]);
 
   return (
-    <main className="bg-gradient-to-b from-gray-50 to-white">
+    <main className="bg-gray-50">
       {/* Hero Slider Section */}
       <section className="min-h-[80vh] flex items-center py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[90%]  mx-auto w-full">

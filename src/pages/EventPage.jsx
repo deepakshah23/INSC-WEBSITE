@@ -13,10 +13,10 @@ const EventPage = () => {
           <img
             src="event.png"
             alt="Program and Events"
-            className="w-full h-full object-cover opacity-80"
+            className="w-full h-full object-cover opacity-50"
           />
         </div>
-        <div className="relative text-center text-white">
+        <div className="relative text-center text-white ">
           <h1 className="text-6xl font-bold">Program and Events</h1>
           <p className="text-lg mt-2">Get Consortium Connected.</p>
         </div>

@@ -1,74 +1,135 @@
-import React from "react";
+import React, { useState } from "react";
+import menuItems from "../assets/lib/menuItems";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+
   return (
-    <nav className="bg-white text-black px-6 py-4 flex items-center justify-between backdrop-blur-3xl z-50 font-semibold fixed top-0 w-full ">
+    <nav className="bg-white text-black px-6 py-4 flex items-center justify-between backdrop-blur-3xl z-50 font-semibold fixed top-0 w-full shadow-md">
+      {/* Logo */}
       <div className="flex items-center space-x-6">
         <img
           src="/img/imageedit_1_9737649523.png"
           alt="Logo"
           className="h-10"
         />
-        <a href="/" className="text-sm hover:text-yellow-600">
-          Home
-        </a>
-        <a href="/aboutus" className="text-sm hover:text-yellow-600">
-          About Us
-        </a>
-        <a href="/events" className="text-sm hover:text-yellow-600">
-          Event +
-        </a>
-        <a href="/become-member" className="text-sm hover:text-yellow-600">
-          Become a Member
-        </a>
-        {/* Dropdown Fix */}
-        <div className="relative group">
-          <button className="text-sm hover:text-yellow-600">
-            Product & Services ▾
-          </button>
-          <div className="absolute hidden group-hover:block  bg-[#eceaeaeb] text-black font-semibold p-2 rounded top-full left-0 w-40 shadow-lg z-50">
-            <a
-              href="http://hondoc.indianschoolconsortium.com/"
-              target="_blank"
-              className="block px-4 py-2 rounded hover:text-yellow-600"
-            >
-              Honorary Doctorate
-            </a>
-            <a
-              href="http://mechtech.employmentexpress.net/"
-              target="_blank"
-              className="block px-4 py-2 rounded hover:text-yellow-600"
-            >
-              Production Engineer
-            </a>
-            <a
-              href="http://webdev.employmentexpress.net/"
-              target="_blank"
-              className="block px-4 py-2 rounded hover:text-yellow-600"
-            >
-              Web Developer
-            </a>
-            <a
-              href="http://daboot.employmentexpress.net/"
-              target="_blank"
-              className="block px-4 py-2 rounded hover:text-yellow-600"
-            >
-              Data Analyst
-            </a>
-          </div>
-        </div>
-
-        <a
-          href="https://employmentexpress.org/"
-          target="_blank"
-          className="text-sm hover:text-yellow-600"
-        >
-          Diploma Courses
-        </a>
-        <a href="/contactus" className="text-sm hover:text-yellow-600">
-          Contact Us
-        </a>
       </div>
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex items-center space-x-6">
+        {menuItems.map((item, index) =>
+          item.isDropdown ? (
+            <div key={index} className="relative">
+              <button
+                className="text-sm hover:text-yellow-600"
+                onClick={() =>
+                  setOpenDropdown(openDropdown === index ? null : index)
+                }
+              >
+                {item.name} ▾
+              </button>
+              {openDropdown === index && (
+                <div
+                  className="absolute left-0 mt-2 bg-[#eceaeaeb] text-black font-semibold p-2 rounded shadow-lg z-50 w-48"
+                  onMouseEnter={() => setOpenDropdown(index)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  {item.subMenu.map((sub, subIndex) => (
+                    <a
+                      key={subIndex}
+                      href={sub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-2 rounded hover:text-yellow-600"
+                    >
+                      {sub.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <a
+              key={index}
+              href={item.link}
+              className="text-sm hover:text-yellow-600"
+            >
+              {item.name}
+            </a>
+          )
+        )}
+      </div>
+
+      {/* Mobile Menu Button */}
+      <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {isOpen ? (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          ) : (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          )}
+        </svg>
+      </button>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md flex flex-col space-y-4 px-6 py-4">
+          {menuItems.map((item, index) =>
+            item.isDropdown ? (
+              <div key={index} className="w-full">
+                <button
+                  className="text-sm hover:text-yellow-600 text-left w-full flex justify-between"
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === index ? null : index)
+                  }
+                >
+                  {item.name} ▾
+                </button>
+                {openDropdown === index && (
+                  <div className="bg-[#eceaeaeb] text-black font-semibold p-2 rounded mt-2 shadow-lg">
+                    {item.subMenu.map((sub, subIndex) => (
+                      <a
+                        key={subIndex}
+                        href={sub.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2 rounded hover:text-yellow-600"
+                      >
+                        {sub.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <a
+                key={index}
+                href={item.link}
+                className="text-sm hover:text-yellow-600"
+              >
+                {item.name}
+              </a>
+            )
+          )}
+        </div>
+      )}
     </nav>
   );
 };
