@@ -14,10 +14,10 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-10 px-5">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between  gap-8 pb-6">
+    <footer className="bg-gray-800 text-white py-10 px-5 w-full">
+      <div className="w-full mx-auto flex flex-col md:flex-row justify-between  gap-8 pb-6">
         {/* Useful Links */}
-        <div className="w-full md:w-1/3 text-center md:text-left">
+        <div className="w-full md:w-1/3 text-center md:text-left px-16">
           <h3 className="text-lg font-semibold mb-3">Useful Links</h3>
           <ul className="space-y-2">
             {usefulLinks.map((link, index) => (
@@ -101,7 +101,7 @@ const Footer = () => {
       <div className="border-t border-gray-600 w-11/12 mx-auto my-6"></div>
 
       {/* Copyright */}
-      <div className="container mx-auto text-center mt-6 pt-2">
+      <div className="w-full mx-auto text-center mt-6 pt-2">
         <p className="text-sm">
           &copy; {new Date().getFullYear()} Indian School Consortium Foundation.
           All rights reserved.

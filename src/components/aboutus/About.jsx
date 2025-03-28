@@ -4,7 +4,7 @@ import { aboutData } from "../../assets/lib/aboutData";
 
 const AboutSection = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 ">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-green-50">
         <div className="absolute inset-0 bg-[url('/img/image.png')] bg-cover bg-center opacity-20" />
@@ -25,8 +25,8 @@ const AboutSection = () => {
       <About2 />
 
       {/* Our Vision Section */}
-      <div className="py-16 md:py-20 bg-gray-50">
-        <div className="container mx-auto px-6 md:px-12 lg:px-16">
+      <div className=" py-10 bg-gray-50">
+        <div className="w-[90%] mx-auto px-6 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Text Content */}
             <div>
@@ -45,7 +45,7 @@ const AboutSection = () => {
 
             {/* Image Section */}
             <div className="relative flex justify-center md:justify-end">
-              <div className="w-full sm:w-3/4 md:w-full aspect-square rounded-full overflow-hidden h-[60vh] md:h-[70vh]">
+              <div className="w-[70%] sm:w-3/4 md:w-full aspect-square rounded-full overflow-hidden h-[50vh] md:h-[50vh]">
                 <img
                   src={aboutData.visionImage}
                   alt="Community work"

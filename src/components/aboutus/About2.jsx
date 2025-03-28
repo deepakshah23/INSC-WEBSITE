@@ -40,99 +40,88 @@ export default function About2() {
     if (isAutoPlaying) {
       interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
-      }, 5000); // Change slide every 5 seconds
+      }, 5000);
     }
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
   return (
-    <main className="bg-gray-50">
-      {/* Hero Slider Section */}
-      <section className="min-h-[80vh] flex items-center py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-[90%]  mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-8">
-              <h1 className="text-5xl font-bold text-gray-900">
+    <main className="bg-gray-50 w-full overflow-hidden ">
+      <section className="min-h-[65vh] flex flex-col items-center pt-8 px-4 sm:px-6">
+        <div className=" mx-auto w-[90%] ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-6 text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
                 {slides[currentSlide].title}
               </h1>
-              <div className="space-y-6">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  {slides[currentSlide].description}
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                {slides[currentSlide].description}
+              </p>
+              {slides[currentSlide].additionalText && (
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                   {slides[currentSlide].additionalText}
                 </p>
-              </div>
+              )}
             </div>
 
-            <div className="space-y-10">
-              <div className="relative h-[380px] w-full">
-                <img
-                  src={slides[currentSlide].image || "/placeholder.svg"}
-                  alt={slides[currentSlide].imageAlt}
-                  className="object-contain rounded-lg "
-                  priority
-                />
-              </div>
-              <div className="flex justify-center items-center gap-4 pt-3">
-                <button
-                  onClick={previousSlide}
-                  className="text-gray-500 hover:text-gray-500"
-                  aria-label="Previous slide"
-                >
-                  <ArrowLeft className="w-6 h-6" />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="text-gray-500 hover:text-gray-500"
-                  aria-label="Next slide"
-                >
-                  <ArrowRight className="w-6 h-6" />
-                </button>
-              </div>
+            <div className="relative w-full flex justify-center">
+              <img
+                src={slides[currentSlide].image || "/placeholder.svg"}
+                alt={slides[currentSlide].imageAlt}
+                className="w-full max-w-[500px] h-auto object-cover rounded-lg"
+              />
             </div>
+          </div>
+          <div className="flex justify-center items-center gap-6 mt-6">
+            <button
+              onClick={previousSlide}
+              className="p-3 rounded-full bg-gray-200 hover:bg-gray-300"
+              aria-label="Previous slide"
+            >
+              <ArrowLeft className="w-6 h-6 text-gray-700" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="p-3 rounded-full bg-gray-200 hover:bg-gray-300"
+              aria-label="Next slide"
+            >
+              <ArrowRight className="w-6 h-6 text-gray-700" />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* History Section */}
-      <section className="min-h-[80vh] bg-gray-50 pt-5">
-        <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl font-bold text-gray-900">Our Mission</h2>
-              <div className="prose prose-lg text-gray-700">
-                <p>
-                  The Indian School Consortium (INSC) is dedicated to
-                  transforming the landscape of education across India by
-                  fostering a collaborative and innovative educational
-                  environment.
-                </p>
-                <p>
-                  Our mission is to elevate the quality of education through the
-                  promotion of best practices, cutting-edge teaching
-                  methodologies, and the sharing of resources among member
-                  schools. We are committed to supporting the professional
-                  growth of educators by offering targeted training and
-                  development opportunities.
-                </p>
-                <p>
-                  In addition, the INSC emphasizes the importance of holistic
-                  student development, ensuring that academic achievement is
-                  complemented by social, emotional, and physical growth. By
-                  advocating for progressive education policies and addressing
-                  systemic challenges, we strive to create a more equitable and
-                  effective education system that prepares students for the
-                  future.
-                </p>
-              </div>
+      <section className="min-h-[60vh] bg-gray-50 pt-5">
+        <div className="w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-6 text-center lg:text-left">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                Our Mission
+              </h2>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                The Indian School Consortium (INSC) is dedicated to transforming
+                the landscape of education across India by fostering a
+                collaborative and innovative educational environment.
+              </p>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                Our mission is to elevate the quality of education through the
+                promotion of best practices, cutting-edge teaching
+                methodologies, and the sharing of resources among member
+                schools. We are committed to supporting the professional growth
+                of educators by offering targeted training and development
+                opportunities.
+              </p>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                In addition, the INSC emphasizes the importance of holistic
+                student development, ensuring that academic achievement is
+                complemented by social, emotional, and physical growth.
+              </p>
             </div>
-            <div className="relative h-[300px] w-full">
+            <div className="relative w-full flex justify-center">
               <img
                 src="http://indianschoolconsortium.com/assets/img/mis.jpg"
                 alt="ERP History Illustration"
-                fill
-                className="object-contain rounded-lg"
+                className=" max-w-[90%] h-auto object-cover rounded-lg"
               />
             </div>
           </div>

@@ -7,6 +7,8 @@ export const usefulLinks = [
 ];
 
 export const ourWorkLinks = [
+  { name: "Data Analyst", path: "http://daboot.employmentexpress.net/" },
+  { name: "Web Developer", path: "http://webdev.employmentexpress.net/" },
   { name: "Diploma Courses", path: "https://employmentexpress.org/" },
   {
     name: "Honorary Doctorate",
@@ -16,8 +18,6 @@ export const ourWorkLinks = [
     name: "Production Engineer",
     path: "http://mechtech.employmentexpress.net/",
   },
-  { name: "Web Developer", path: "http://webdev.employmentexpress.net/" },
-  { name: "Data Analyst", path: "http://daboot.employmentexpress.net/" },
 ];
 
 export const contactInfo = {

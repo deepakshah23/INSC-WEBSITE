@@ -16,10 +16,15 @@ const partners = [
 
 const Partners = () => {
   return (
-    <div className="overflow-hidden w-full md:w-[80%] lg:w-[60%] xl:w-[50%] mx-auto py-14 px-4">
-      <div className="p-6 text-2xl md:text-3xl text-gray-800 text-center font-bold">
-        Our Partners
+    <div className="overflow-hidden w-full md:w-[80%] lg:w-[60%] xl:w-[50%] mx-auto pb-4 px-4">
+      <div className="text-center mb-16">
+        <div className="flex items-center justify-center gap-6 mb-4">
+          <div className="w-16 h-[1px] bg-red-500"></div>
+          <h2 className="text-4xl font-bold">Partners</h2>
+          <div className="w-16 h-[1px] bg-red-500"></div>
+        </div>
       </div>
+
       <div className="relative w-full overflow-hidden">
         <motion.div
           className="flex space-x-4 md:space-x-6"
