@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 const partners = [
@@ -19,7 +19,7 @@ const Partners = () => {
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
 
-  // Start animation
+  // Function to start the scrolling animation
   const startAnimation = () => {
     controls.start({
       x: ["0%", "-100%"],
@@ -31,9 +31,15 @@ const Partners = () => {
     });
   };
 
+  // Function to stop the scrolling animation
   const stopAnimation = () => {
-    controls.stop(); // This will freeze at current position
+    controls.stop();
   };
+
+  // Start animation on component mount (helps on mobile)
+  useEffect(() => {
+    startAnimation();
+  }, []);
 
   return (
     <div className="overflow-hidden w-full md:w-[95%] mx-auto pb-6">
