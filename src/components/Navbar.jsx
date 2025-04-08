@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import menuItems from "../assets/lib/menuItems";
 
 const Navbar = () => {
@@ -9,11 +10,13 @@ const Navbar = () => {
     <nav className="bg-white text-black px-6 py-4 flex items-center justify-between backdrop-blur-3xl z-50 font-semibold fixed top-0 w-full shadow-md">
       {/* Logo */}
       <div className="flex items-center space-x-6">
-        <img
-          src="/img/imageedit_1_9737649523.png"
-          alt="Logo"
-          className="h-10"
-        />
+        <Link to="/">
+          <img
+            src="/img/imageedit_1_9737649523.png"
+            alt="Logo"
+            className="h-10"
+          />
+        </Link>
       </div>
 
       {/* Desktop Menu */}
@@ -35,28 +38,48 @@ const Navbar = () => {
                   onMouseEnter={() => setOpenDropdown(index)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  {item.subMenu.map((sub, subIndex) => (
-                    <a
-                      key={subIndex}
-                      href={sub.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block px-4 py-2 rounded hover:text-yellow-600"
-                    >
-                      {sub.name}
-                    </a>
-                  ))}
+                  {item.subMenu.map((sub, subIndex) =>
+                    sub.link.startsWith("http") ? (
+                      <a
+                        key={subIndex}
+                        href={sub.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2 rounded hover:text-yellow-600"
+                      >
+                        {sub.name}
+                      </a>
+                    ) : (
+                      <Link
+                        key={subIndex}
+                        to={sub.link}
+                        className="block px-4 py-2 rounded hover:text-yellow-600"
+                      >
+                        {sub.name}
+                      </Link>
+                    )
+                  )}
                 </div>
               )}
             </div>
-          ) : (
+          ) : item.link.startsWith("http") ? (
             <a
               key={index}
               href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm hover:text-yellow-600"
             >
               {item.name}
             </a>
+          ) : (
+            <Link
+              key={index}
+              to={item.link}
+              className="text-sm hover:text-yellow-600"
+            >
+              {item.name}
+            </Link>
           )
         )}
       </div>
@@ -104,28 +127,48 @@ const Navbar = () => {
                 </button>
                 {openDropdown === index && (
                   <div className="bg-[#eceaeaeb] text-black font-semibold p-2 rounded mt-2 shadow-lg">
-                    {item.subMenu.map((sub, subIndex) => (
-                      <a
-                        key={subIndex}
-                        href={sub.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-4 py-2 rounded hover:text-yellow-600"
-                      >
-                        {sub.name}
-                      </a>
-                    ))}
+                    {item.subMenu.map((sub, subIndex) =>
+                      sub.link.startsWith("http") ? (
+                        <a
+                          key={subIndex}
+                          href={sub.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2 rounded hover:text-yellow-600"
+                        >
+                          {sub.name}
+                        </a>
+                      ) : (
+                        <Link
+                          key={subIndex}
+                          to={sub.link}
+                          className="block px-4 py-2 rounded hover:text-yellow-600"
+                        >
+                          {sub.name}
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
               </div>
-            ) : (
+            ) : item.link.startsWith("http") ? (
               <a
                 key={index}
                 href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm hover:text-yellow-600"
               >
                 {item.name}
               </a>
+            ) : (
+              <Link
+                key={index}
+                to={item.link}
+                className="text-sm hover:text-yellow-600"
+              >
+                {item.name}
+              </Link>
             )
           )}
         </div>
