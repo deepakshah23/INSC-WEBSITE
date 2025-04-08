@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import {
   Phone,
@@ -32,7 +30,11 @@ export default function ContactInfo() {
     {
       icon: MapPin,
       title: "Address",
-      details: ["Crossing Republik", "Ghaziabad 201009", "Uttarpradesh, India"],
+      details: [
+        "Crossing Republik",
+        "Ghaziabad 201009",
+        "Uttar Pradesh, India",
+      ],
       delay: 0.3,
     },
     {
@@ -60,9 +62,11 @@ export default function ContactInfo() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="space-y-8"
+      className="max-w-3xl mx-auto  sm:px-1 md:px-10 py-8 space-y-10"
     >
-      <h2 className="text-2xl md:text-3xl font-light">Contact Information</h2>
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-center">
+        Contact Information
+      </h2>
 
       <div className="space-y-6">
         {contactItems.map(({ icon: Icon, title, details, delay }, index) => (
@@ -73,12 +77,14 @@ export default function ContactInfo() {
             transition={{ duration: 0.5, delay }}
             className="flex items-start space-x-4"
           >
-            <div className="bg-black text-white p-3 rounded-full">
+            <div className="shrink-0 bg-black text-white p-3 rounded-full">
               <Icon className="h-5 w-5" />
             </div>
             <div>
-              <h3 className="text-lg font-medium mb-1">{title}</h3>
-              <div className="space-y-1 text-gray-600">
+              <h3 className="text-base sm:text-lg font-semibold mb-1">
+                {title}
+              </h3>
+              <div className="space-y-1 text-gray-600 text-sm break-words">
                 {details.map((detail, i) => (
                   <p key={i}>{detail}</p>
                 ))}
@@ -87,31 +93,34 @@ export default function ContactInfo() {
           </motion.div>
         ))}
       </div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
+        className="text-start"
       >
         <Link
-          href="https://wa.me/15551234567"
+          to="https://wa.me/15551234567"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center bg-green-500 text-white px-5 py-3 rounded-full"
+          className="inline-flex items-center bg-green-500 hover:bg-green-600 transition-colors text-white px-6 py-3 rounded-full text-sm sm:text-base"
         >
           <MessageSquare className="h-5 w-5 mr-2" />
           <span>Chat on WhatsApp</span>
         </Link>
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="pt-4"
+        className="pt-4 text-start"
       >
         <h3 className="text-lg font-medium mb-3">Follow Us</h3>
-        <div className="flex space-x-4">
+        <div className="flex justify-start flex-wrap gap-4">
           {socialLinks.map(({ href, icon: Icon, label }) => (
             <motion.a
               key={label}

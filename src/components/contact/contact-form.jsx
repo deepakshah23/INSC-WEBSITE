@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Send, Loader2 } from "lucide-react";
 import { z } from "zod";
 
-// Form validation schema
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
@@ -33,7 +32,6 @@ export default function ContactForm() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
@@ -42,7 +40,6 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate form
     try {
       formSchema.parse(formData);
       setErrors({});
@@ -59,14 +56,10 @@ export default function ContactForm() {
       }
     }
 
-    // Submit form
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      // Success
       setSubmitStatus("success");
       setFormData({
         name: "",
@@ -76,14 +69,12 @@ export default function ContactForm() {
         message: "",
       });
 
-      // Reset after 3 seconds
       setTimeout(() => {
         setSubmitStatus("idle");
       }, 3000);
     } catch (error) {
       setSubmitStatus("error");
 
-      // Reset after 3 seconds
       setTimeout(() => {
         setSubmitStatus("idle");
       }, 3000);
@@ -97,15 +88,15 @@ export default function ContactForm() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="bg-white p-8 md:p-10 rounded-lg shadow-sm"
+      className="bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-sm"
     >
-      <h2 className="text-2xl md:text-3xl font-light mb-8">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-light mb-6 sm:mb-8">
         Send us a message
       </h2>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
         {["name", "email", "phone", "subject", "message"].map((field) => (
-          <div className="space-y-2" key={field}>
+          <div className="space-y-1 sm:space-y-2" key={field}>
             <div className="relative">
               {field === "message" ? (
                 <textarea
@@ -120,7 +111,7 @@ export default function ContactForm() {
                     errors[field]
                       ? "border-red-500"
                       : "border-gray-200 focus:border-green-500"
-                  } pb-2 pt-1 outline-none transition-colors text-lg resize-none`}
+                  } pb-2 pt-1 outline-none transition-colors text-base sm:text-lg resize-none`}
                 />
               ) : (
                 <input
@@ -141,7 +132,7 @@ export default function ContactForm() {
                     errors[field]
                       ? "border-red-500"
                       : "border-gray-200 focus:border-green-500"
-                  } pb-2 pt-1 outline-none transition-colors text-lg`}
+                  } pb-2 pt-1 outline-none transition-colors text-base sm:text-lg`}
                 />
               )}
               <motion.div
@@ -157,12 +148,11 @@ export default function ContactForm() {
           </div>
         ))}
 
-        {/* Submit Button */}
         <div className="pt-4">
           <motion.button
             type="submit"
             disabled={isSubmitting}
-            className={`relative w-full md:w-auto px-8 py-3 text-white font-medium rounded-md overflow-hidden ${
+            className={`relative w-full sm:w-auto px-6 sm:px-8 py-3 text-white font-medium rounded-md overflow-hidden ${
               isSubmitting ? "bg-gray-400" : "bg-black hover:bg-gray-800"
             } transition-colors duration-300 flex items-center justify-center`}
             whileHover={{ scale: 1.02 }}
@@ -182,7 +172,7 @@ export default function ContactForm() {
 
             {submitStatus !== "idle" && (
               <motion.div
-                className={`absolute inset-0 flex items-center justify-center ${
+                className={`absolute inset-0 flex items-center justify-center text-white font-semibold ${
                   submitStatus === "success" ? "bg-green-500" : "bg-red-500"
                 }`}
                 initial={{ x: "-100%" }}
