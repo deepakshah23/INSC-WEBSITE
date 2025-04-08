@@ -8,7 +8,7 @@ export const aboutData = {
     "Our goal is to cultivate well-rounded, forward-thinking students who are prepared to thrive in an increasingly globalized world, while ensuring that each school and educator has the tools and support needed to contribute to this transformative vision.",
   ],
   backgroundImage: "/img/image.png",
-  visionImage: "http://indianschoolconsortium.com/assets/img/vis.png",
+  visionImage: "/about/image4.png",
   quote:
     "Every small action counts towards making a bigger impact in someone's life.",
 };

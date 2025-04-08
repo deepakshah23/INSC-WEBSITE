@@ -9,14 +9,14 @@ const heroContent = [
     subtitle: "Education is the key to unlock the world",
     buttonText: "Join the Mission",
     url: "/become-member",
-    background: "/hero1.png",
+    background: "/hero7.png",
   },
   {
     title: "BUILDING BRIGHTER MINDS",
     subtitle: "Together, we create opportunities for every child",
     buttonText: "Become a Volunteer",
     url: "/contact",
-    background: "hero4.png",
+    background: "hero6.png",
   },
   {
     title: "LEARN. INSPIRE. TRANSFORM.",

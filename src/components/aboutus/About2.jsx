@@ -8,7 +8,7 @@ const slides = [
     description:
       "The Indian School Consortium is an organization that brings together all schools in India. With a mission to provide quality education and a focus on holistic development, the consortium aims to foster a culture of excellence in every aspect of the educational experience.",
     additionalText: "",
-    image: "http://indianschoolconsortium.com/assets/img/bg12.jpg",
+    image: "/about/image1.png",
     imageAlt: "elevating1",
   },
   {
@@ -16,7 +16,7 @@ const slides = [
     description:
       "With a diverse range of member schools that cover various regions, cultures and academic specializations, the Indian School Consortium is a unique platform for students, teachers and educational leaders to come together and learn from each other. The consortium's programs and initiatives are designed to support continuous improvement and to provide the students with the best possible learning opportunities.",
     additionalText: "",
-    image: "http://indianschoolconsortium.com/assets/img/Schools-NEP-2020.jpg",
+    image: "/about/image2.png",
     imageAlt: "elevating2",
   },
 ];
@@ -123,7 +123,7 @@ export default function About2() {
             </div>
             <div className="relative w-full flex justify-center">
               <img
-                src="http://indianschoolconsortium.com/assets/img/mis.jpg"
+                src="/about/image3.png"
                 alt="ERP History Illustration"
                 className=" max-w-[90%] h-auto object-cover rounded-lg"
               />
