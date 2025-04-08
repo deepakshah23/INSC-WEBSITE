@@ -330,13 +330,14 @@ const DonatePage = () => {
             Your support is crucial in ensuring education for all!
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start px-4 md:px-8 py-6 max-w-7xl mx-auto">
             {/* Left Column - Information */}
             <LeftContent />
-            {/* Right Column - Donation Box */}
+
+            {/* Right Column - Donation Box or Donor Form */}
             {!showDonorForm ? (
-              <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-800">
-                <h3 className="text-2xl font-semibold text-center text-gray-800 mb-6">
+              <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg border border-gray-300">
+                <h3 className="text-2xl sm:text-3xl font-semibold text-center text-gray-800 mb-6">
                   SUPPORT THE CAUSE
                 </h3>
 
@@ -356,7 +357,7 @@ const DonatePage = () => {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                       />
                     </div>
 
@@ -374,101 +375,51 @@ const DonatePage = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                       />
                     </div>
                   </div>
 
-                  <div className="w-full bg-gray-500 text-white py-3 rounded-md font-semibold text-center">
+                  <div className="w-full bg-gray-600 text-white py-3 rounded-md font-semibold text-center">
                     MAKE A DIFFERENCE
                   </div>
 
-                  <div className="grid grid-cols-4 gap-4">
-                    <label className="flex items-center justify-center">
-                      <input
-                        type="radio"
-                        name="amount"
-                        value="500"
-                        checked={formData.amount === "500"}
-                        onChange={handleChange}
-                        className="sr-only"
-                      />
-                      <span
-                        className={`px-4 py-2 rounded-full w-full text-center cursor-pointer ${
-                          formData.amount === "500"
-                            ? "bg-gray-500 text-white"
-                            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                        }`}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    {["500", "3000", "6000", "12000"].map((amount) => (
+                      <label
+                        key={amount}
+                        className="flex items-center justify-center"
                       >
-                        ₹500
-                      </span>
-                    </label>
-                    <label className="flex items-center justify-center">
-                      <input
-                        type="radio"
-                        name="amount"
-                        value="3000"
-                        checked={formData.amount === "3000"}
-                        onChange={handleChange}
-                        className="sr-only"
-                      />
-                      <span
-                        className={`px-4 py-2 rounded-full w-full text-center cursor-pointer ${
-                          formData.amount === "3000"
-                            ? "bg-gray-500 text-white"
-                            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                        }`}
-                      >
-                        ₹3000
-                      </span>
-                    </label>
-                    <label className="flex items-center justify-center">
-                      <input
-                        type="radio"
-                        name="amount"
-                        value="6000"
-                        checked={formData.amount === "6000"}
-                        onChange={handleChange}
-                        className="sr-only"
-                      />
-                      <span
-                        className={`px-4 py-2 rounded-full w-full text-center cursor-pointer ${
-                          formData.amount === "6000"
-                            ? "bg-gray-500 text-white"
-                            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                        }`}
-                      >
-                        ₹6000
-                      </span>
-                    </label>
-                    <label className="flex items-center justify-center">
-                      <input
-                        type="radio"
-                        name="amount"
-                        value="12000"
-                        checked={formData.amount === "12000"}
-                        onChange={handleChange}
-                        className="sr-only"
-                      />
-                      <span
-                        className={`px-4 py-2 rounded-full w-full text-center cursor-pointer ${
-                          formData.amount === "12000"
-                            ? "bg-gray-500 text-white"
-                            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                        }`}
-                      >
-                        ₹12000
-                      </span>
-                    </label>
+                        <input
+                          type="radio"
+                          name="amount"
+                          value={amount}
+                          checked={formData.amount === amount}
+                          onChange={handleChange}
+                          className="sr-only"
+                        />
+                        <span
+                          className={`px-4 py-2 rounded-full w-full text-center cursor-pointer text-sm ${
+                            formData.amount === amount
+                              ? "bg-gray-600 text-white"
+                              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                          }`}
+                        >
+                          ₹{amount}
+                        </span>
+                      </label>
+                    ))}
                   </div>
 
-                  <div className="text-center space-y-4">
-                    <p className="font-medium">
+                  <div className="text-center space-y-4 mt-4">
+                    <p className="font-medium text-sm sm:text-base">
                       YOUR DONATION WILL HELP FOR THE EDUCATION
                     </p>
-                    <p className="font-medium">OF 1 CHILD FOR 6 MONTHS</p>
+                    <p className="font-medium text-sm sm:text-base">
+                      OF 1 CHILD FOR 6 MONTHS
+                    </p>
 
-                    <div className="flex justify-center space-x-2">
+                    <div className="flex justify-center">
                       <img
                         src="child.png"
                         alt="Children icons"
@@ -482,12 +433,12 @@ const DonatePage = () => {
 
                     <button
                       onClick={handleDonateClick}
-                      className="w-full bg-gray-500 text-white py-3 rounded-md font-semibold hover:bg-gray-600 transition-colors"
+                      className="w-full bg-gray-700 text-white py-3 rounded-md font-semibold hover:bg-gray-800 transition-colors"
                     >
                       DONATE NOW
                     </button>
 
-                    <div className="text-xs text-gray-600 text-center mt-4">
+                    <div className="text-xs text-gray-600 text-center mt-4 leading-relaxed">
                       YOUR CONTRIBUTIONS ARE ELIGIBLE FOR UPTO 50% TAX BENEFIT
                       <br />
                       UNDER SECTION 80G AS INSC FOUNDATION IS REGISTERED AS
