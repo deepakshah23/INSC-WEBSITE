@@ -9,6 +9,7 @@ import BecomeMemberPage from "./pages/BecomeMemberPage";
 import EventPage from "./pages/EventPage";
 import ScrollToTopButton from "./components/Hook/Scroll-top";
 import DonatePage from "./pages/DonatePage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<AboutusPage />} />
           <Route path="/become-member" element={<BecomeMemberPage />} />
           <Route path="/donate" element={<DonatePage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
       <Footer />
