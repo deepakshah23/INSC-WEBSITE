@@ -17,7 +17,7 @@ const EventPage = () => {
             className="w-full h-full object-cover opacity-50"
           />
         </div>
-        <div className="relative text-center text-white px-4">
+        <div className="relative text-center text-white px-4 pt-10">
           <h1 className="text-4xl md:text-6xl font-bold">Program and Events</h1>
           <p className="text-lg mt-2">Get Consortium Connected.</p>
         </div>

@@ -38,7 +38,7 @@ export default function BecomeMemberPage() {
         {/* Dark Gray Overlay */}
         <div className="absolute inset-0 bg-gray-900/50"></div>
 
-        <div className="relative text-center text-white p-6">
+        <div className="relative text-center text-white px-6 pb-6 pt-10">
           <h1 className="text-4xl font-bold">Become a Member</h1>
           <p className="mt-2">
             If you are a teacher, student, parent, school, college or
