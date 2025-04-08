@@ -64,7 +64,7 @@ export default function ContactInfo() {
       transition={{ duration: 0.6 }}
       className="max-w-3xl mx-auto  sm:px-1 md:px-10 py-8 space-y-10"
     >
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-center">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-start">
         Contact Information
       </h2>
 
