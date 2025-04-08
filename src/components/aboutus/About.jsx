@@ -1,5 +1,5 @@
 import React from "react";
-import About2 from "./about2";
+import About2 from "./About2";
 import { aboutData } from "../../assets/lib/aboutData";
 
 const AboutSection = () => {
