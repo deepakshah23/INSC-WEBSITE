@@ -3,8 +3,8 @@ import opportunities from "../../assets/lib/opportunitiesData";
 
 const OpportunitiesSection = () => {
   return (
-    <div className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 max-w-[95%]">
+    <div className="py-10 bg-gray-50">
+      <div className="container mx-auto  max-w-[95%]">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-6 mb-4">
             <div className="w-16 h-[1px] bg-red-500"></div>
@@ -13,11 +13,11 @@ const OpportunitiesSection = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {opportunities.map((opp, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg overflow-hidden shadow-lg"
+              className="bg-white rounded-lg overflow-hidden shadow-lg w-full sm:w-[48%] lg:w-[32%] xl:w-[23%]"
             >
               <img
                 src={opp.image}

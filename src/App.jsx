@@ -8,6 +8,7 @@ import AboutusPage from "./pages/AboutusPage";
 import BecomeMemberPage from "./pages/BecomeMemberPage";
 import EventPage from "./pages/EventPage";
 import ScrollToTopButton from "./components/Hook/Scroll-top";
+import DonatePage from "./pages/DonatePage";
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/contactus" element={<ContactPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/events" element={<EventPage />} />
-          <Route path="/aboutus" element={<AboutusPage />} />
+          <Route path="/about" element={<AboutusPage />} />
           <Route path="/become-member" element={<BecomeMemberPage />} />
+          <Route path="/donate" element={<DonatePage />} />
         </Routes>
       </div>
       <Footer />

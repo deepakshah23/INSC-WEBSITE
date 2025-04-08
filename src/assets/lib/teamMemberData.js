@@ -41,12 +41,12 @@ const teamMembers = [
     extra: "(CEO-TPS Empire Services Pvt Ltd.)",
     image: "/img/team/amit.jpg",
   },
-  {
-    name: "Krishna Sharma",
-    role: "National Committee Member",
-    extra: "Director (DIGIGENER8)",
-    image: "/img/team/team4.jpg",
-  },
+  // {
+  //   name: "Krishna Sharma",
+  //   role: "National Committee Member",
+  //   extra: "Director (DIGIGENER8)",
+  //   image: "/img/team/team4.jpg",
+  // },
   {
     name: "Palvi Bali",
     role: "National Committee Member",

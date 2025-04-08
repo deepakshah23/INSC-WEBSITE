@@ -30,9 +30,13 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Text Content */}
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                {aboutData.visionTitle}
-              </h2>
+              <div className="flex gap-2 items-center">
+                <div className="w-6 border-1 border-red-700 h-0 mb-4"></div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                  {aboutData.visionTitle}
+                </h2>
+                <div className="w-6 border-1 border-red-700 h-0 mb-4"></div>
+              </div>
               {aboutData.visionDescription.map((paragraph, index) => (
                 <p
                   key={index}

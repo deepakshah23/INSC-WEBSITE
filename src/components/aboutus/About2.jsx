@@ -95,9 +95,13 @@ export default function About2() {
         <div className="w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center lg:text-left">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                Our Mission
-              </h2>
+              <div className="flex gap-2 items-center">
+                <div className="w-6 border-1 border-red-700 h-0 mt-2"></div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                  Our Mission
+                </h2>
+                <div className="w-6 border-1 border-red-700 h-0 mt-2"></div>
+              </div>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                 The Indian School Consortium (INSC) is dedicated to transforming
                 the landscape of education across India by fostering a

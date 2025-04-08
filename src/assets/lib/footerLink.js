@@ -1,8 +1,9 @@
 export const usefulLinks = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/aboutus" },
+  { name: "About", path: "/about" },
   { name: "Event +", path: "/events" },
-  { name: "Contact", path: "/contactus" },
+  { name: "Contact", path: "/contact" },
+  { name: "Contribute Us", path: "/contribute" },
   { name: "Become a Member", path: "/become-member" },
 ];
 

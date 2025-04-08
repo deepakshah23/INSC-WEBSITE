@@ -58,7 +58,7 @@ const Footer = () => {
           {/* Newsletter */}
           <div className="mt-4">
             <p className="font-semibold">Subscribe to Our Newsletter</p>
-            <div className="flex flex-col sm:flex-row items-center gap-3 mt-2">
+            <div className="flex flex-col sm:flex-row items-center gap-3 mt-2 flex-wrap sm:justify-center md:justify-start">
               <input
                 type="email"
                 placeholder="Enter Your Email"

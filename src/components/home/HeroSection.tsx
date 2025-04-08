@@ -21,9 +21,11 @@ const HeroSection = () => {
             The main motto is that every opportunities should reach every
             student irrespective to their geographical location
           </p>
-          <button className="bg-yellow-500 text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition flex items-center">
-            Explore Our Schools <ArrowRight className="ml-2" />
-          </button>
+          <a href="https://employmentexpress.org/" target="_blank">
+            <button className="bg-yellow-500 text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition flex items-center cursor-pointer">
+              Explore Our Schools <ArrowRight className="ml-2" />
+            </button>
+          </a>
         </div>
       </div>
     </div>

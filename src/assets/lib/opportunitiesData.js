@@ -11,12 +11,7 @@ const opportunities = [
       "Elevate your career prospects with the Certification Program of Indian School Consortium through our partners.",
     image: "/img/blog/opp2.jpg",
   },
-  {
-    title: "Certification Programs",
-    description:
-      "Elevate your career prospects with the Certification Program of Indian School Consortium through our partners.",
-    image: "/img/blog/opp2.jpg",
-  },
+
   {
     title: "Awareness Programs",
     description:
@@ -44,12 +39,6 @@ const opportunities = [
     title: "Recognition Opportunities",
     description: "Get recognition and affiliation from authorized bodies.",
     image: "/img/blog/opp8.jpg",
-  },
-  {
-    title: "College/University Admission",
-    description:
-      "Guidance and support for the college/university admission process.",
-    image: "/img/blog/opp9.jpg",
   },
 ];
 

@@ -1,12 +1,14 @@
 export const menuItems = [
   { name: "Home", link: "/" },
-  { name: "About Us", link: "/aboutus" },
-  { name: "Event +", link: "/events" },
+  { name: "About", link: "/about" },
+  { name: "Events", link: "/events" },
   { name: "Become a Member", link: "/become-member" },
+
   {
     name: "Product & Services",
     isDropdown: true,
     subMenu: [
+      { name: "Diploma Courses", link: "https://employmentexpress.org/" },
       {
         name: "Honorary Doctorate",
         link: "http://hondoc.indianschoolconsortium.com/",
@@ -19,7 +21,8 @@ export const menuItems = [
       { name: "Data Analyst", link: "http://daboot.employmentexpress.net/" },
     ],
   },
-  { name: "Diploma Courses", link: "https://employmentexpress.org/" },
-  { name: "Contact Us", link: "/contactus" },
+
+  { name: "Contact Us", link: "/contact" },
+  { name: "Donate Us", link: "/donate" },
 ];
 export default menuItems;

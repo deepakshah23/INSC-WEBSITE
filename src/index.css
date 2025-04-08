@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: system-ui, Merriweather, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 
@@ -14,4 +14,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  font-family: "Open Sans", serif;
+}
 
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", sans-serif;
+}

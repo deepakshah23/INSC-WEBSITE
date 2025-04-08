@@ -1,11 +1,29 @@
+import AdvisoryBoard from "../components/becomeMembers/AdvisoryBoard";
+import WhyChooseUs from "../components/becomeMembers/WhyChooseUs";
+
 const childImage = new URL("../assets/image.png", import.meta.url).href;
-const advisoryImages = [
-  new URL("../assets/1.jpg", import.meta.url).href,
-  new URL("../assets/2.jpg", import.meta.url).href,
-  new URL("../assets/3.jpg", import.meta.url).href,
-  new URL("../assets/4.jpg", import.meta.url).href,
-  new URL("../assets/5.jpg", import.meta.url).href,
-  new URL("../assets/6.jpg", import.meta.url).href,
+
+const memberShipData = [
+  { title: "Individual Membership", price: "INR 100/" },
+  {
+    title: "Student Membership (Upto 12th standard)",
+    price: "INR 20/",
+  },
+  { title: "Student Membership (UG/ PG)", price: "INR 50/" },
+  {
+    title:
+      "Institutional Membership (Upto 12th standard/ Urban area/ CBSE/ ICSE)",
+    price: "INR 1000/",
+  },
+  {
+    title:
+      "Institutional Membership (Upto 12th standard/ Rural area/ State Board)",
+    price: "INR 500/",
+  },
+  {
+    title: "Institutional Membership (UG/ PG/ University)",
+    price: "INR 2500/",
+  },
 ];
 export default function BecomeMemberPage() {
   return (
@@ -40,28 +58,7 @@ export default function BecomeMemberPage() {
 
         {/* Membership Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 max-w-5xl mx-auto">
-          {[
-            { title: "Individual Membership", price: "INR 100/" },
-            {
-              title: "Student Membership (Upto 12th standard)",
-              price: "INR 20/",
-            },
-            { title: "Student Membership (UG/ PG)", price: "INR 50/" },
-            {
-              title:
-                "Institutional Membership (Upto 12th standard/ Urban area/ CBSE/ ICSE)",
-              price: "INR 1000/",
-            },
-            {
-              title:
-                "Institutional Membership (Upto 12th standard/ Rural area/ State Board)",
-              price: "INR 500/",
-            },
-            {
-              title: "Institutional Membership (UG/ PG/ University)",
-              price: "INR 2500/",
-            },
-          ].map((membership, index) => (
+          {memberShipData.map((membership, index) => (
             <div
               key={index}
               className="bg-white p-6 rounded-lg shadow-md text-center"
@@ -76,157 +73,63 @@ export default function BecomeMemberPage() {
         </div>
       </div>
 
-      {/* Why Choose Us Section */}
-      <div className="relative w-full py-12 px-6 bg-gray-100 flex justify-center items-center">
-        <div className="relative max-w-[90%] w-full rounded-xl shadow-lg p-8 bg-gray-900/20">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-20 rounded-xl "
-            style={{ backgroundImage: `url(${childImage})` }}
-          ></div>
+      {/* Why Choose Us Section and membership form */}
+      <div className="relative w-full py-12 px-4 sm:px-6 bg-gray-100 flex flex-col lg:flex-row justify-center items-center gap-12">
+        {/* Membership Form Section */}
+        <div className="w-full max-w-lg">
+          <h2 className="text-center text-3xl font-semibold">
+            Membership Form
+          </h2>
+          <form className="mt-8 bg-white p-6 rounded-lg shadow-md">
+            {[
+              { label: "Email", type: "email" },
+              { label: "Name", type: "text" },
+              { label: "Organisation Name", type: "text" },
+              { label: "Phone Number", type: "tel" },
+              { label: "Address of Organisation", type: "text" },
+            ].map((field, index) => (
+              <div className="mb-4" key={index}>
+                <label className="block text-gray-700">{field.label} *</label>
+                <input
+                  type={field.type}
+                  className="w-full p-2 border border-gray-300 rounded"
+                  required
+                />
+              </div>
+            ))}
 
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900">
-                Why{" "}
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">
-                  Choose Us
-                </span>
-              </h2>
-              <p className="mt-4 text-gray-800 text-md leading-relaxed">
-                Our network of resources includes{" "}
-                <strong>
-                  Corporates, NGOs, Educational Service Providers, Government
-                  Bodies, Financial Bodies
-                </strong>
-                , and top universities. We leverage{" "}
-                <span className=" px-1">cutting-edge technology</span> to
-                provide students and educators with the best opportunities to
-                grow.
-              </p>
+            <div className="mb-4">
+              <label className="block text-gray-700">
+                Organisation Status *
+              </label>
+              <select
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              >
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="UG">UG</option>
+                <option value="PG">PG</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                { title: "Recognition Opportunities", icon: "🏆" },
-                { title: "Financial Aid Opportunity", icon: "💰" },
-                { title: "Career Exposure", icon: "📈" },
-                { title: "International Exposure", icon: "🌍" },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center justify-center text-center transform hover:scale-105 transition-all"
-                >
-                  <div className="text-4xl bg-red-100 text-red-500 w-16 h-16 flex items-center justify-center rounded-full">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold mt-4 text-gray-900">
-                    {item.title}
-                  </h3>
-                </div>
-              ))}
-            </div>
-          </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+            >
+              Submit
+            </button>
+          </form>
         </div>
+
+        {/* Why Choose Us Section */}
+        <WhyChooseUs />
       </div>
 
       {/* Advisory Board Section */}
-      <div className="py-12 px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-6">Advisory Board</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-[90%] mx-auto">
-          {[
-            "Sunil Bhadauriya",
-            "S Vishwanath Naik",
-            "Gurjant Singh",
-            "Vijaybhaskar Annapareddy",
-            "Dr. Nitin Vyas",
-            "Dr. Pankaj Kumar",
-          ].map((name, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md text-center"
-            >
-              <img
-                src={advisoryImages[index]}
-                alt={name}
-                className="w-full h-56 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-lg font-semibold">{name}</h3>
-              <p className="text-gray-600 mt-2 text-sm">
-                Position and Description
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Membership Form Section */}
-      <div className="py-12 px-6">
-        <h2 className="text-center text-3xl font-semibold">Membership Form</h2>
-        <form className="max-w-lg mx-auto mt-8 bg-white p-6 rounded-lg shadow-md">
-          <div className="mb-4">
-            <label className="block text-gray-700">Email *</label>
-            <input
-              type="email"
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Name *</label>
-            <input
-              type="text"
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Organisation Name *</label>
-            <input
-              type="text"
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Phone Number *</label>
-            <input
-              type="tel"
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">
-              Address of Organisation *
-            </label>
-            <input
-              type="text"
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700">Organisation Status *</label>
-            <select
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            >
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="12">12</option>
-              <option value="UG">UG</option>
-              <option value="PG">PG</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+      <AdvisoryBoard />
     </div>
   );
 }

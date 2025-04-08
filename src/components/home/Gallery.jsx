@@ -9,7 +9,7 @@ const Gallery = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=" bg-gray-50 py-10">
       {/* <section className="min-h-[30vh] flex items-center justify-center relative overflow-hidden px-4">
         <div className="absolute inset-0 bg-grid-black/[0.02] -z-10" />
         <div className="max-w-5xl mx-auto text-center relative">
@@ -21,7 +21,7 @@ const Gallery = () => {
           </p>
         </div>
       </section> */}
-      <div className="text-center mb-16">
+      <div className="text-center ">
         <div className="flex items-center justify-center gap-6 mb-4">
           <div className="w-16 h-[1px] bg-red-500"></div>
           <h2 className="text-4xl font-bold">Our Few Past Activities</h2>
@@ -32,7 +32,7 @@ const Gallery = () => {
         </p>
       </div>
 
-      <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8 pb-10 pt-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {images.map((image, index) => (
             <div
