@@ -16,14 +16,14 @@ const heroContent = [
     subtitle: "Together, we create opportunities for every child",
     buttonText: "Become a Volunteer",
     url: "/contact",
-    background: "/hero2.png",
+    background: "hero4.png",
   },
   {
     title: "LEARN. INSPIRE. TRANSFORM.",
     subtitle: "Changing lives through education and care",
     buttonText: "Support Us",
     url: "/donate",
-    background: "/hero3.png",
+    background: "/hero5.png",
   },
 ];
 

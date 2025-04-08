@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BsTwitterX } from "react-icons/bs";
 import {
   FaFacebookF,
@@ -15,16 +16,16 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-10 px-5 w-full">
-      <div className="w-full mx-auto flex flex-col md:flex-row justify-between  gap-8 pb-6">
+      <div className="w-full mx-auto flex flex-col md:flex-row justify-between gap-8 pb-6">
         {/* Useful Links */}
         <div className="w-full md:w-1/3 text-center md:text-left px-16">
           <h3 className="text-lg font-semibold mb-3">Useful Links</h3>
           <ul className="space-y-2">
             {usefulLinks.map((link, index) => (
               <li key={index}>
-                <a href={link.path} className="hover:text-yellow-600">
+                <Link to={link.path} className="hover:text-yellow-600">
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -39,6 +40,7 @@ const Footer = () => {
                 <a
                   href={link.path}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-yellow-600"
                 >
                   {link.name}
@@ -88,6 +90,8 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white text-lg hover:text-yellow-600"
                 >
                   <IconComponent />

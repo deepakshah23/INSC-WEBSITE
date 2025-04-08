@@ -134,6 +134,7 @@ const Navbar = () => {
                           href={sub.link}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() => setIsOpen(false)}
                           className="block px-4 py-2 rounded hover:text-yellow-600"
                         >
                           {sub.name}
@@ -142,6 +143,7 @@ const Navbar = () => {
                         <Link
                           key={subIndex}
                           to={sub.link}
+                          onClick={() => setIsOpen(false)}
                           className="block px-4 py-2 rounded hover:text-yellow-600"
                         >
                           {sub.name}
@@ -157,6 +159,7 @@ const Navbar = () => {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
                 className="text-sm hover:text-yellow-600"
               >
                 {item.name}
@@ -165,6 +168,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={item.link}
+                onClick={() => setIsOpen(false)}
                 className="text-sm hover:text-yellow-600"
               >
                 {item.name}

@@ -10,11 +10,13 @@ import EventPage from "./pages/EventPage";
 import ScrollToTopButton from "./components/Hook/Scroll-top";
 import DonatePage from "./pages/DonatePage";
 import ErrorPage from "./pages/ErrorPage";
+import LinkScrollTop from "./components/Hook/LinkScrollTop";
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <LinkScrollTop />
       <ScrollToTopButton />
       <div>
         <Routes>
