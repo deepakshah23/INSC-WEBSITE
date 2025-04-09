@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import opportunities from "../../assets/lib/opportunitiesData";
 
-// Define the type for each opportunity
 type Opportunity = {
   title: string;
   description: string;
@@ -13,12 +12,12 @@ const OpportunitiesSection = () => {
 
   return (
     <div
-      className={`py-10 bg-gray-50 relative ${
+      className={`py-10 bg-gray-50 relative overflow-x-hidden ${
         selectedCard ? "overflow-hidden" : ""
       }`}
     >
       <div
-        className={`container mx-auto max-w-[95%] transition-all duration-300 ${
+        className={`mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
           selectedCard ? "blur-sm" : ""
         }`}
       >
@@ -30,21 +29,23 @@ const OpportunitiesSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
           {opportunities.map((opp, index) => (
             <div
               key={index}
               onClick={() => setSelectedCard(opp)}
-              className="bg-white cursor-pointer rounded-lg overflow-hidden shadow-lg w-full sm:w-[48%] lg:w-[32%] xl:w-[23%] hover:scale-105 transition-transform duration-300"
+              className="bg-white cursor-pointer rounded-lg overflow-hidden shadow-lg w-full xs:w-[90%] sm:w-[48%] md:w-[45%] lg:w-[30%] xl:w-[23%] hover:scale-105 transition-transform duration-300"
             >
               <img
                 src={opp.image}
                 alt={opp.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover object-center"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-4">{opp.title}</h3>
-                <p className="text-gray-600">{opp.description}</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-xl font-bold mb-2 sm:mb-4">{opp.title}</h3>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  {opp.description}
+                </p>
               </div>
             </div>
           ))}
@@ -53,21 +54,23 @@ const OpportunitiesSection = () => {
 
       {selectedCard && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90 backdrop-blur-md p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-90 backdrop-blur-md p-4 sm:p-6 overflow-auto"
           onClick={() => setSelectedCard(null)}
         >
           <div
-            className="bg-white max-w-3xl w-full rounded-lg shadow-xl overflow-hidden"
+            className="bg-white w-full max-w-3xl rounded-lg shadow-xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={selectedCard.image}
               alt={selectedCard.title}
-              className="w-full h-96 object-cover object-center"
+              className="w-full max-h-[60vh] object-cover object-center"
             />
-            <div className="p-8 text-center">
-              <h3 className="text-3xl font-bold mb-4">{selectedCard.title}</h3>
-              <p className="text-gray-700 text-lg">
+            <div className="p-4 sm:p-8 text-center">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+                {selectedCard.title}
+              </h3>
+              <p className="text-gray-700 text-base sm:text-lg">
                 {selectedCard.description}
               </p>
               <button
