@@ -68,7 +68,7 @@ const Navbar = () => {
             item.isDropdown ? (
               <div key={index} className="relative group">
                 <button
-                  className="text-base xl:text-lg hover:text-yellow-600 transition-colors duration-200 flex items-center"
+                  className="text-base xl:text-md  hover:text-yellow-600 transition-colors duration-200 flex items-center"
                   onClick={() =>
                     setOpenDropdown(openDropdown === index ? null : index)
                   }
@@ -115,7 +115,7 @@ const Navbar = () => {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base xl:text-lg hover:text-yellow-600 transition-colors duration-200"
+                className="text-base xl:text-md hover:text-yellow-600 transition-colors duration-200"
               >
                 {item.name}
               </a>
@@ -123,7 +123,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={item.link}
-                className="text-base xl:text-lg hover:text-yellow-600 transition-colors duration-200"
+                className="text-base xl:text-md  hover:text-yellow-600 transition-colors duration-200"
               >
                 {item.name}
               </Link>
